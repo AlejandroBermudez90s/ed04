@@ -10,12 +10,10 @@ import java.util.List;
  * @since   14/03/25
  */
 
-class Contacto {
+class Persona {
 
-    /** Nombre del contacto */
     private String name;
 
-    /** Lista de números de teléfono del contacto */
     private List<String> phones;
 
     /**
@@ -24,13 +22,13 @@ class Contacto {
      * @param name  Nombre del contacto.
      * @param phone Número de teléfono inicial del contacto.
      */
-    public Contacto(String name, String phone) {
-        this.name = name;
-        this.phones = new ArrayList<>();
-        this.phones.add(phone);
+    public Persona(String name, String phone) {
+        this.setName(name);
+        this.setPhones(new ArrayList<>());
+        this.getPhones().add(phone);
     }
 
-    /**
+    /** Nombre del contacto */ /**
      * Obtiene el nombre del contacto.
      *
      * @return Nombre del contacto.
@@ -39,12 +37,20 @@ class Contacto {
         return this.name;
     }
 
-    /**
+    /** Lista de números de teléfono del contacto */ /**
      * Obtiene la lista de números de teléfono del contacto.
      *
      * @return Lista de números de teléfono.
      */
     public List<String> getPhones() {
         return this.phones;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPhones(List<String> phones) {
+        this.phones = phones;
     }
 }
