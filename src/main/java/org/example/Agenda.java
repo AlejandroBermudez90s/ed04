@@ -10,7 +10,7 @@ import java.util.List;
  * @version 1.0
  * @since   14/03/25
  */
-public class Agenda {
+public class Agenda implements interfazAgenda {
 
     /** lista de contactos */
     private List<Persona> contacts;
